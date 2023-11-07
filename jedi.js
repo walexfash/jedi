@@ -1,0 +1,26 @@
+{
+ "98721":{
+ "name":"Yoda",
+ "planet":"Dagobah",
+ "power_level":90
+ },
+ "54832":{
+ "name":"Obi-WanKenobi",
+ "planet":"Stewjon",
+ "power_level":85
+ },
+ "12345":{
+ "name":"MaceWindu",
+ "planet":"HaruunKal",
+ "power_level":87
+ },
+ "78965":{
+ "name":"Rey",
+ "planet":"Jakku",
+ "power_level":75
+ },
+ "63421":{
+ "name":"Qui-GonJinn",
+ "planet":"Coruscant",
+ "power_level":82
+ },
