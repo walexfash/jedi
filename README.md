@@ -223,36 +223,39 @@ and locations of strong Jedi.
 
 **Output**
 
-- Create S3 bucket, create Lambda function, create IAM roles and policies and create KMS key files.
+- S3 Bucket created
+
+<img width="654" alt="Screenshot 2023-11-06 005215" src="https://github.com/walexfash/jedi/assets/35840406/2954f3a7-3e02-4502-af44-4538bcf8d9d2">
+
+
+- Jedi file uploaded
+
+<img width="682" alt="Screenshot 2023-11-06 010051" src="https://github.com/walexfash/jedi/assets/35840406/7c044d4e-27eb-43e4-bcdf-0b9ffff0728a">
+
+
+
+- Lambder Function created
+
+<img width="658" alt="Screenshot 2023-11-06 005339" src="https://github.com/walexfash/jedi/assets/35840406/41a5c90a-3bc0-465b-b6bd-fe0a889532db">
+
+
+
+- Dynamodb created
+
+<img width="660" alt="Screenshot 2023-11-06 005428" src="https://github.com/walexfash/jedi/assets/35840406/1f0b009c-759b-410f-956d-19e444ebc646">
+
+
+- KMS key created.
    
 
-<img width="149" alt="image" src="https://github.com/walexfash/jedi/assets/35840406/ee72a16c-82a2-4f10-9f9a-246c48f6fe0b">
+<img width="396" alt="Screenshot 2023-11-06 005853" src="https://github.com/walexfash/jedi/assets/35840406/73c1f0b2-0bc2-4b4d-b39b-238e3f5592f3">
 
-
-S3 Bucket created
-
-<img width="654" alt="image" src="https://github.com/walexfash/jedi/assets/35840406/be0cd87e-73b8-4397-8359-70d1a94ce5a2">
-
-
-Jedi file uploaded
-
-<img width="682" alt="image" src="https://github.com/walexfash/jedi/assets/35840406/ef6f1ba5-d6df-402d-bf68-ca2b8beea2b0">
-
-Lambder Function created
-
-<img width="658" alt="image" src="https://github.com/walexfash/jedi/assets/35840406/37043e0b-ad61-46b9-9c67-f80ad31db944">
-
-Dynamodb created
-
-<img width="659" alt="image" src="https://github.com/walexfash/jedi/assets/35840406/510e39fd-206e-4668-8fe5-f11dd30fe605">
 
 IAM role created
 
-<img width="650" alt="image" src="https://github.com/walexfash/jedi/assets/35840406/8b40724e-f9da-45fc-b6bd-d14c6ba99de8">
+<img width="650" alt="Screenshot 2023-11-06 005555" src="https://github.com/walexfash/jedi/assets/35840406/ea564afe-2be0-448e-91d2-0b77d1b6b8ab">
 
-KMS key created
 
-<img width="395" alt="image" src="https://github.com/walexfash/jedi/assets/35840406/141f5173-df11-4d9f-8a67-71d17e3bddca">
 
 **Note**
 
