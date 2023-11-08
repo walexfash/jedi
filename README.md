@@ -40,7 +40,6 @@ provider "aws" {
   secret_key = "xxxxxxxxxxxxx"
 }
    
-<img width="330" alt="image" src="https://github.com/walexfash/jedi/assets/35840406/ce54fe23-f010-40ce-b729-131f6b828728">
 
 2. Create S3 bucket name, object and bucket notification.
 
@@ -228,6 +227,7 @@ and locations of strong Jedi.
 <img width="654" alt="Screenshot 2023-11-06 005215" src="https://github.com/walexfash/jedi/assets/35840406/2954f3a7-3e02-4502-af44-4538bcf8d9d2">
 
 
+
 - Jedi file uploaded
 
 <img width="682" alt="Screenshot 2023-11-06 010051" src="https://github.com/walexfash/jedi/assets/35840406/7c044d4e-27eb-43e4-bcdf-0b9ffff0728a">
@@ -245,10 +245,12 @@ and locations of strong Jedi.
 <img width="660" alt="Screenshot 2023-11-06 005428" src="https://github.com/walexfash/jedi/assets/35840406/1f0b009c-759b-410f-956d-19e444ebc646">
 
 
+
 - KMS key created.
    
 
 <img width="396" alt="Screenshot 2023-11-06 005853" src="https://github.com/walexfash/jedi/assets/35840406/73c1f0b2-0bc2-4b4d-b39b-238e3f5592f3">
+
 
 
 IAM role created
