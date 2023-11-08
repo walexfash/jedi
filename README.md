@@ -20,6 +20,7 @@ This Terraform module aims to simplify all operations when working with the serv
 - Create jedi.zip, add jedi.json file.
 
 **Usage**
+
 1. Create Provider file.
 
 terraform {
@@ -33,6 +34,7 @@ terraform {
 
 provider "aws" {
   # Configuration options
+  
   region ="eu-west-2"
   access_key = "xxxxxxxxxxxxx"
   secret_key = "xxxxxxxxxxxxx"
@@ -43,21 +45,21 @@ provider "aws" {
 2. Create S3 bucket name, object and bucket notification.
 
 # S3 bucket to upload files
+
 resource "aws_s3_bucket" "uploads" {
   bucket = "jedi-upload-bucket-1"
 }
 
 # Upload a file to the bucket
+
 resource "aws_s3_bucket_object" "object" {
   bucket = aws_s3_bucket.uploads.id
   key    = "/temp/jedi.js"
   source = "./jedi.js"
-
-  # The file will be uploaded every time there is a change
-  # etag = filemd5("${path.module}/local/path/to/file") 
 }
 
 # S3 bucket notification
+
 resource "aws_s3_bucket_notification" "bucket_notification" {
   bucket = aws_s3_bucket.uploads.id
 
@@ -73,6 +75,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 3. Create Lambda function (lambda.tf) that will be triggered by S3 uploads.
 
 # Lambda function triggered by S3 uploads 
+
 resource "aws_lambda_function" "process_upload" {
   filename      = "jedi.zip"
   function_name = "process_upload"
@@ -92,6 +95,7 @@ resource "aws_lambda_function" "process_upload" {
 4. Create KMS resource.
 
 # Create KMS key
+
 resource "aws_kms_key" "jedi_key" {
   description             = "Jedi KMS key"
   deletion_window_in_days = 7
@@ -100,13 +104,12 @@ resource "aws_kms_key" "jedi_key" {
 5. Create Dynamodb resource.
 
 # DynamoDB table to store encrypted IDs
+
 resource "aws_dynamodb_table" "db" {
   name           = "file-uploads"
   hash_key       = "ID"
-  # stream_enabled = true
   read_capacity  = 1
   write_capacity = 1
-  # stream_view_type = "NEW_IMAGE"
 
   attribute {
     name = "ID"
@@ -117,6 +120,7 @@ resource "aws_dynamodb_table" "db" {
 6. Create IAM (iam.tf) that will contains Policies and roles. This is the process of setting up permissions for S3 bucket, Lambda, Dynamodb .
 
 # Allow public uploads to S3 bucket
+
 resource "aws_s3_bucket_policy" "allow_uploads" {
   bucket = aws_s3_bucket.uploads.id
   policy = jsonencode({
@@ -142,6 +146,7 @@ resource "aws_s3_bucket_policy" "allow_uploads" {
 }
 
 # Allow Lambda to encrypt with KMS and write to DynamoDB
+
 resource "aws_iam_role" "lambda" {
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -201,6 +206,7 @@ resource "aws_iam_role_policy" "lambda" {
 }
 
 # Allow S3 to invoke lambda
+
 resource "aws_lambda_permission" "allow_bucket" {
   statement_id  = "AllowExecutionFromS3Bucket"
   action        = "lambda:InvokeFunction"
